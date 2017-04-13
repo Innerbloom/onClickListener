@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class AquaFish extends Fragment {
     private static final int LAYOUT = R.layout.aqua_fish1;
 
     private View view;
-    private List <FishName> fishNames;
+    private List<FishName> fishNames;
     private RecyclerView rv;
 
     public static AquaFish getInstance() {
@@ -44,7 +45,7 @@ public class AquaFish extends Fragment {
         view = inflater.inflate(LAYOUT, container, false);
 
         //Создание списка
-        rv=(RecyclerView)view.findViewById(R.id.rv);
+        rv = (RecyclerView) view.findViewById(R.id.rv);
 
         //set LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
@@ -58,7 +59,7 @@ public class AquaFish extends Fragment {
         return view;
     }
 
-    private void initializeData(){
+    private void initializeData() {
         fishNames = new ArrayList<>();
         fishNames.add(new FishName("Апистограмма Рамирези", "Mikrogeophagus ramirezi", R.drawable.f000_1));
         fishNames.add(new FishName("Боливийская бабочка", "Mikrogeophagus altispinosus", R.drawable.f000_2));
@@ -66,7 +67,7 @@ public class AquaFish extends Fragment {
         fishNames.add(new FishName("Апистограмма какаду", "Apistogramma cacatuoides", R.drawable.f000_4));
     }
 
-    private void initializeAdapter(){
+    private void initializeAdapter() {
         RVAdapter adapter = new RVAdapter(fishNames);
         rv.setAdapter(adapter);
     }

@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.myTheme2);

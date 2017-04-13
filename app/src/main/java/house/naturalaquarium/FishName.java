@@ -2,8 +2,7 @@ package house.naturalaquarium;
 
 
 public class FishName {
-    String name;
-    String about;
+    String name, about;
     int photoId;
 
     public FishName(String name, String about, int photoId) {
